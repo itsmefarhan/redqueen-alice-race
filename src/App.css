@@ -75,15 +75,6 @@ img {
   left: 0;
 }
 
-#foreground {
-  z-index: 1;
-}
-
-#foreground,
-.background2 {
-  transform: translateX(100%);
-}
-
 #palmtreefront {
   top: 0;
   left: 10%;
@@ -107,6 +98,15 @@ img {
 .palmtreeback {
   top: -30%;
   left: 40%;
+}
+
+#foreground {
+  z-index: 1;
+}
+
+#foreground,
+.background2 {
+  transform: translateX(100%);
 }
 
 #w_rook_upright {
