@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+* {
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sky,
+.earth {
+  position: absolute;
+  left: 0;
+  height: 50vh;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.sky {
+  background: #246e89
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_sky.jpg") repeat-x
+    100% 100% / auto 100%;
+  top: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.earth {
+  background: #eb125d repeat-x 0 0 / 100% auto;
+  width: 100%;
+  bottom: 0;
+}
+
+.alice_queen {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 80%;
+  max-width: 400px;
+  z-index: 1;
+}
+
+.alice_queen:before {
+  content: " ";
+  display: block;
+  padding-top: 87%;
+}
+
+.alice_queen img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scenery {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#foreground {
+  z-index: 1;
+}
+
+#foreground,
+.background2 {
+  transform: translateX(100%);
+}
+
+#palmtreefront {
+  top: 0;
+  left: 10%;
+}
+
+#pawn {
+  top: 5%;
+  left: 30%;
+}
+
+.pawn {
+  top: -20%;
+  left: 15%;
+}
+
+.pawn2 {
+  top: -10%;
+  left: 100%;
+}
+
+.palmtreeback {
+  top: -30%;
+  left: 40%;
+}
+
+#w_rook_upright {
+  top: 30%;
+  left: 95%;
+}
+
+#w_rook {
+  top: 10%;
+  left: 60%;
+}
+
+#bush {
+  top: 55%;
+  left: 30%;
 }
