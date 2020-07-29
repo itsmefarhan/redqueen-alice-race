@@ -27,7 +27,13 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
+    
+    - name: Install Web Packages
+      run: npm install
+    - name: Build App
+      run: npm run build
+      
     - name: Install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./ alice-redqueen-race.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build alice-redqueen-race.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
